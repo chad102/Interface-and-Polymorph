@@ -1,4 +1,4 @@
-public class Transport {
+public class Transport implements TransportService{
     private String modelName;
     private int wheelsCount;
 
@@ -21,5 +21,10 @@ public class Transport {
 
     public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
+    }
+
+    @Override
+    public void doService() {
+        System.out.println("Меняем покрышку" + getWheelsCount() + " раз(а)");
     }
 }
